@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lilita+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lilita+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fjalla+One&family=Lilita+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="app-name">
+            <img class="app-image" src="images/Leonardo_Phoenix_Design_a_vibrant_logo_image_that_embodies_the_3.jpg"
+                alt="">
+            <h3>Task Management App</h3>
+        </div>
+        <div class="about-app">
+            <h3>Welcome</h3>
+        </div>
+        <div class="profile-imge">
+            <img src="images/my photo .jpg" alt="">
+        </div>
+
+    </header>
+    <div class="container" id="container">
+
+        <!-- <h1 class="container-title">Task Management App</h1> -->
+        
+        <form id="task-form">
+            <label for="title">Task Name : </label>
+            <input type="text" id="title" placeholder="Task Title" required>
+            <label for="description">Description : </label>
+            <input type="text" id="description" placeholder="Description" required>
+            <label for="due-date">Enter Date : </label>
+            <input type="date" id="due-date" required>
+            <label for="priority">Choose priority : </label>
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        
+
+        <hr>
+
+        <div class="task-div-container">
+            
+
+            <div id="filter-div">
+                <h2 style="display: inline-block;">Filter Tasks</h2>
+                <label for="priority-filter">by Task priority</label>
+                <select id="priority-filter">
+                    <option value="all">all</option>
+                    <option value="high">high</option>
+                    <option value="medium">medium</option>
+                    <option value="low">low</option>
+                </select>
+                <label for="status-filter">by Task Status : </label>
+                <select id="status-filter">
+                    <option value="all">all</option>
+                    <option value="pending">pending</option>
+                    <option value="completed">completed</option>
+                </select>
+                <label for="date-filter">by date : </label>
+                <select id="date-filter">
+                    <option value="all">all</option>
+                    <option value="next-7-days">next 7 days</option>
+                </select>
+                <button id="filter-btn">Apply filter</button>
+            </div>
+
+            <div id="task-sections">
+                <div id="no-data" style="display: none;">No data is here to display!</div>
+                <div id="pending-tasks">
+                    <h2 class="pending-task-color">Pending Tasks</h2>
+                </div>
+                <div id="completed-tasks">
+                    <h2 class="completed-task-color">Completed Tasks</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="image">
+            <img src="images/my photo .jpg" alt="">
+        </div>
+        <div class="detail">
+            <h3>Thank you! </h3>
+            <p>Copright &copy; 2023 by Codehal | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#task-form"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+
+    </footer>
+    
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
