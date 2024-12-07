@@ -124,8 +124,8 @@ body {
             height: 3rem;
             border: none;
             border-radius: 9px;
-            background-color: rgb(255, 248, 239);
-            outline: none;
+            background-color: rgb(248, 248, 248);
+            outline: rgb(196, 194, 194);
         }
 
         select{

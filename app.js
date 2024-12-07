@@ -101,12 +101,16 @@ document.getElementById('filter-btn').addEventListener('click',applyfilter)
 
 function applyfilter(){
     const filterValue = document.getElementById('priority-filter').value ;
+    // console.log(filterValue);
+    
     const filterStatus = document.getElementById('status-filter').value;
+    // console.log(filterStatus);
+    
     const dateValue = document.getElementById('date-filter').value;
-    console.log(filterStatus);
+    // console.log(dateFilter);
     
     let noData = false;
-    console.log(filterValue);
+    // console.log(filterValue); 
 
     pendingTasksContainer.querySelectorAll('.task').forEach(task =>{
         const displayTask = priorityFilter(task,filterValue) && statusFilter(task,filterStatus) &&
@@ -135,7 +139,9 @@ function applyfilter(){
 
         task.style.display = displayTask ? 'block' : 'none';
     })
-
+    document.getElementById('priority-filter').value = 'all';
+    document.getElementById('status-filter').value = 'all';
+    document.getElementById('date-filter').value = 'all';
 }
 
 function priorityFilter(task,priorityValue){
